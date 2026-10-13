@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlforge"
+version = "0.1.0"
+description = "End-to-end ML lifecycle library: problem formulation, data, preprocessing, EDA, multi-algorithm training, accuracy+relevancy-aware model selection, and incremental improvement."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=1.5",
+    "numpy>=1.23",
+    "scikit-learn>=1.2",
+]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.5"]
+
+[tool.setuptools.packages.find]
+include = ["mlforge*"]
